@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer utilities {
+
+    .scroll-style::-webkit-scrollbar {
+        width: 6px;
+    }
+  
+    .scroll-style::-webkit-scrollbar-thumb {
+        background-color: rgba(228, 228, 228, 0.6); 
+        border-radius: 10px;
+    }
+  
+    .scroll-style::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+}

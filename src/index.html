@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/a665e85003.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="./output.css" rel="stylesheet">
+  <title>Dashboard</title>
+</head>
+<body class="flex h-screen bg-gradient-to-b from-indigo-700 to-cyan-600 text-gray-800">
+
+  <!-- aside -->
+  <aside class="hidden md:block w-64 bg-gradient-to-b from-indigo-600 to-indigo-800 text-white shadow-lg">
+    <div class="p-6">
+      <h1 class="text-3xl font-bold">Dashboard</h1>
+    </div>
+    <nav class="px-4 space-y-2 text-sm">
+      <a href="#" class="font-bold text-lg block px-4 py-2 rounded hover:bg-indigo-700 transition">Inicio</a>
+      <a href="#" class="font-bold text-lg block px-4 py-2 rounded hover:bg-indigo-700 transition">Analíticas</a>
+      <a href="#" class="font-bold text-lg block px-4 py-2 rounded hover:bg-indigo-700 transition">Ventas</a>
+      <a href="#" class="font-bold text-lg block px-4 py-2 rounded hover:bg-indigo-700 transition">Usuarios</a>
+      <a href="#" class="font-bold text-lg block px-4 py-2 rounded hover:bg-indigo-700 transition">Mensajes</a>
+      <a href="#" class="font-bold text-lg block px-4 py-2 rounded hover:bg-indigo-700 transition">Configuración</a>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <div class="w-full flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white px-6 py-4 flex justify-between items-center shadow-sm">
+
+      <!-- Boton de menu responsive -->
+      <div class="md:hidden">
+
+        <input type="checkbox" name="menu" id="menu" class="peer hidden">
+        <label for="menu"><i class="fa-solid fa-bars text-2xl hidden"></i></label>
+
+        <!-- Fondo negro con opacidad -->
+        <label for="menu" class="absolute top-0 left-0 w-full h-full cursor-pointer bg-black opacity-50 z-5 hidden peer-checked:block"></label>
+
+        <!-- Menu responsive -->
+        <aside class="absolute top-0 left-0 translate-x-[-256px] w-64 h-full bg-gradient-to-b from-indigo-600 to-indigo-800 text-white shadow-lg peer-checked:translate-x-0 z-10 transition-transform duration-500">
+          <div class="p-6 flex gap-4 items-center">
+            <label for="menu"><i class="fa-solid fa-bars text-2xl hidden"></i></label>
+            <h1 class="text-3xl font-bold">Dashboard</h1>
+          </div>
+          <nav class="px-4 space-y-2 text-sm">
+            <a href="#" class="font-bold text-lg block px-4 py-2 rounded hover:bg-indigo-700 transition">Inicio</a>
+            <a href="#" class="font-bold text-lg block px-4 py-2 rounded hover:bg-indigo-700 transition">Analíticas</a>
+            <a href="#" class="font-bold text-lg block px-4 py-2 rounded hover:bg-indigo-700 transition">Ventas</a>
+            <a href="#" class="font-bold text-lg block px-4 py-2 rounded hover:bg-indigo-700 transition">Usuarios</a>
+            <a href="#" class="font-bold text-lg block px-4 py-2 rounded hover:bg-indigo-700 transition">Mensajes</a>
+            <a href="#" class="font-bold text-lg block px-4 py-2 rounded hover:bg-indigo-700 transition">Configuración</a>
+          </nav>
+        </aside>
+  
+      </div>
+
+      <h2 class="text-2xl font-semibold text-indigo-800 hidden md:inline">Bienvenido de vuelta!</h2>
+      <div class="flex items-center space-x-4">
+        <div class="relative">
+          <svg class="w-6 h-6 text-gray-600 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 00-5-5.917V4a2 2 0 10-4 0v1.083A6 6 0 004 11v3.159c0 .538-.214 1.055-.595 1.436L2 17h5m5 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+          <span class="absolute top-0 right-0 block w-2 h-2 bg-red-600 rounded-full"></span>
+        </div>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="Avatar" class="w-8 h-8 rounded-full ring-2 ring-indigo-500 cursor-pointer"/>
+      </div>
+    </header>
+
+    <main class="overflow-auto p-6 pb-0 scroll-style">
+      <!-- Stats cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white shadow-md rounded-2xl p-5 border border-indigo-100 animate__animated animate__bounce">
+          <h3 class="text-sm text-indigo-500">Usuarios</h3>
+          <p class="mt-2 text-3xl font-bold text-indigo-800">1,240</p>
+        </div>
+        <div class="bg-white shadow-md rounded-2xl p-5 border border-indigo-100 animate__animated animate__bounce">
+          <h3 class="text-sm text-pink-500">Ventas</h3>
+          <p class="mt-2 text-3xl font-bold text-pink-700">$8,430</p>
+        </div>
+        <div class="bg-white shadow-md rounded-2xl p-5 border border-indigo-100 animate__animated animate__bounce">
+          <h3 class="text-sm text-green-500">Ingresos</h3>
+          <p class="mt-2 text-3xl font-bold text-green-700">$14,200</p>
+        </div>
+        <div class="bg-white shadow-md rounded-2xl p-5 border border-indigo-100 animate__animated animate__bounce">
+          <h3 class="text-sm text-yellow-500">Tareas</h3>
+          <p class="mt-2 text-3xl font-bold text-yellow-600">32</p>
+        </div>
+      </div>
+
+      <!-- Últimas órdenes -->
+      <div class="mt-6 bg-white shadow-md rounded-2xl p-6 border border-indigo-100  animate__animated animate__fadeIn">
+        <h3 class="text-xl font-semibold text-indigo-700 mb-4">Últimas Órdenes</h3>
+        <div class="hidden sm:grid grid-cols-5 gap-4 text-sm font-bold text-gray-600 pl-6">
+          <span>ID</span>
+          <span>Cliente</span>
+          <span>Total</span>
+          <span>Estado</span>
+          <span>Fecha</span>
+        </div>
+        <div class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 text-sm bg-white p-4 rounded-lg shadow-sm">
+            <div class=""><span class="sm:hidden font-bold">ID: </span>#1024</div>
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">Cliente: </span>María Pérez</div>
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">Total: </span>$120.00</div>
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">Estado: </span><span class="inline-block text-green-700 bg-green-100 rounded-full px-4 py-1 text-center text-sm font-medium">Completado</span></div>
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">Fecha: </span>2025-04-20</div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 text-sm bg-white p-4 rounded-lg shadow-sm">
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">ID: </span>#1023</div>
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">Cliente: </span>Juan Gómez</div>
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">Total: </span>$85.50</div>
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">Estado: </span><span class="inline-block text-yellow-800 bg-yellow-100 rounded-full px-4 py-1 text-center text-sm font-medium">Pendiente</span></div>
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">Fecha: </span>2025-04-19</div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 text-sm bg-white p-4 rounded-lg shadow-sm">
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">ID: </span>#1022</div>
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">Cliente: </span>Ana Torres</div>
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">Total: </span>$47.20</div>
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">Estado: </span><span class="inline-block text-red-700 bg-red-100 rounded-full px-4 py-1 text-center text-sm font-medium">Cancelado</span></div>
+            <div class="sm:col-span-1"><span class="sm:hidden font-bold">Fecha: </span>2025-04-18</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- graficos -->
+
+      <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-white shadow-md rounded-2xl p-6 border border-indigo-100">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-4">Actividad Mensual</h3>
+          <div class="h-64 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-300">[Gráfico]</div>
+        </div>
+        <div class="bg-white shadow-md rounded-2xl p-6 border border-indigo-100">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-4">Ventas por Región</h3>
+          <div class="h-64 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-300">[Gráfico]</div>
+        </div>
+      </div>
+
+      <div class="mt-6 bg-white shadow-md rounded-2xl p-6 border border-indigo-100">
+        <h3 class="text-xl font-semibold text-indigo-700 mb-4">Tráfico de usuarios</h3>
+        <div class="h-64 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-300">[Gráfico]</div>
+      </div>
+
+      <footer class="p-4 text-center text-sm text-white font-bold">
+        &copy; 2025 Dashboard de Ernesto. Todos los derechos reservados.
+      </footer>
+
+    </main>
+
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
